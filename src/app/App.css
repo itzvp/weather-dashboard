@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.weather-dashboard {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-item {
+  width: 18%;
+  text-align: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.favorites {
+  margin-top: 20px;
+}
+
+.favorites ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favorites li {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns items to the right */
+  position: absolute; /* Allows positioning anywhere on the page */
+  top: 20px; /* Adjust the top position */
+  right: 20px; /* Adjust the right position */
+  z-index: 10; /* Ensures it appears above other elements */
+}
+
+.forecast {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: background for readability */
+  padding: 10px;
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+
+/* .weather-dashboard {
+  text-align: center;
+  padding: 20px;
+}
+
+.search input {
+  padding: 8px;
+  margin-right: 8px;
+}
+
+.search button {
+  padding: 8px;
+}
+
+.weather-display,
+.favorites {
+  margin-top: 20px;
+}
+
+.favorites ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.favorites li {
+  margin-bottom: 10px;
+}
+
+.favorites button {
+  margin-left: 10px;
+} */
