@@ -7,7 +7,7 @@ import rain from "../assets/icons/rain.png";
 import snow from "../assets/icons/snow.png";
 import storm from "../assets/icons/storm.png";
 import wind from "../assets/icons/windy.png";
-import Image from "next/image"; // Import Image from next/image
+import Image from "next/image";
 import { StaticImageData } from "next/image";
 interface MiniCardProps {
   time: string;
@@ -16,28 +16,22 @@ interface MiniCardProps {
 }
 
 const MiniCard: React.FC<MiniCardProps> = ({ time, temp, iconString }) => {
-  // const [icon, setIcon] = useState<string | undefined>();
   const [icon, setIcon] = useState<StaticImageData | undefined>();
-  // useEffect(() => {
-  //   if (iconString) {
-  //     const iconLower = iconString.toLowerCase();
-  //     if (iconLower.includes("cloud")) {
-  //       setIcon(require("@app/assets/icons/cloud.png"));
-  //     } else if (iconLower.includes("rain")) {
-  //       setIcon(require("@/app/assets/icons/rain.png"));
-  //     } else if (iconLower.includes("clear")) {
-  //       setIcon(require("@/app/assets/icons/sun.png"));
-  //     } else if (iconLower.includes("thunder")) {
-  //       setIcon(require("@/app/assets/icons/storm.png"));
-  //     } else if (iconLower.includes("fog")) {
-  //       setIcon(require("@/app/assets/icons/fog.png"));
-  //     } else if (iconLower.includes("snow")) {
-  //       setIcon(require("@/app/assets/icons/snow.png"));
-  //     } else if (iconLower.includes("wind")) {
-  //       setIcon(require("@/app/assets/icons/windy.png"));
-  //     }
-  //   }
-  // }, [iconString]);
+
+  const iconMapping: Record<string, StaticImageData> = {
+    cloud: cloud,
+    rain: rain,
+    clear: sun,
+    thunder: storm,
+    fog: fog,
+    snow: snow,
+    wind: wind,
+  };
+
+  const matchedIcon = Object.keys(iconMapping).find((key) =>
+    iconString.toLowerCase().includes(key)
+  );
+  setIcon(iconMapping[matchedIcon || "defaultIcon"]);
 
   useEffect(() => {
     if (iconString) {

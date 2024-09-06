@@ -9,7 +9,7 @@ const SearchBar: React.FC = () => {
 
   const handleSearch = () => {
     setPlace(inputValue);
-    setInputValue(""); // Clear input after search
+    setInputValue("");
   };
 
   return (

@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image"; // Import Image from next/image
+import Image from "next/image";
 import Clear from "@/app/assets/images/Clear.jpg";
 import Fog from "@/app/assets/images/fog.png";
 import Cloudy from "@/app/assets/images/Cloudy.jpg";
 import Rainy from "@/app/assets/images/Rainy.jpg";
 import Snow from "@/app/assets/images/snow.jpg";
 import Stormy from "@/app/assets/images/Stormy.jpg";
-import Sunny from "@/app/assets/images/Sunny.jpg";
+// import Sunny from "@/app/assets/images/Sunny.jpg";
 import { useStateContext } from "../context";
 
 const BackgroundLayout: React.FC = () => {
@@ -44,7 +44,7 @@ const BackgroundLayout: React.FC = () => {
     <Image
       src={image}
       alt="weather_image"
-      layout="fill" // Use layout="fill" for a full-screen image
+      fill={true}
       className="h-screen w-full fixed left-0 top-0 -z-[10] object-cover" // Add object-cover for proper sizing
     />
   );
