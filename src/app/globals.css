@@ -42,35 +42,45 @@ body {
 }
 
 .forecast-container {
-  position: fixed; /* Positioning relative to the nearest positioned ancestor */
-  top: 100px; /* Adjust the top position */
-  left: 70rem; /* Adjust the right position */
-  width: 300px; /* Set a width for your forecast container */
-  background: rgba(
-    225,
-    225,
-    225,
-    0.18
-  ); /* Optional: background for readability */
-  padding: 10px; /* Padding around the forecast */
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
-  z-index: 10; /* Ensures it appears above other elements */
+  position: fixed;
+  top: 10%;
+  left: 85%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  max-width: 300px;
+  background: rgba(225, 225, 225, 0.18);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .favorite-container {
-  position: fixed; /* Positioning relative to the nearest positioned ancestor */
-  top: 100px; /* Adjust the top position */
-  left: 37rem; /* Adjust the right position */
-  width: 300px; /* Set a width for your forecast container */
-  background: rgba(
-    225,
-    225,
-    225,
-    0.18
-  ); /* Optional: background for readability */
-  padding: 10px; /* Padding around the forecast */
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
-  z-index: 10; /* Ensures it appears above other elements */
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  max-width: 300px;
+  background: rgba(225, 225, 225, 0.18);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .forecast-container,
+  .favorite-container {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-container,
+  .favorite-container {
+    padding: 5px;
+  }
 }

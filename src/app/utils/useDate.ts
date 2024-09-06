@@ -8,10 +8,10 @@ export const useDate = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setDate(new Date());
-    }, 60 * 1000); // Update every minute
+    }, 60 * 1000);
 
     return () => {
-      clearInterval(timer); // Cleanup on unmount
+      clearInterval(timer);
     };
   }, []);
 

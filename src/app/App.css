@@ -69,53 +69,16 @@ button:hover {
 .weather-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Aligns items to the right */
-  position: absolute; /* Allows positioning anywhere on the page */
-  top: 20px; /* Adjust the top position */
-  right: 20px; /* Adjust the right position */
-  z-index: 10; /* Ensures it appears above other elements */
+  align-items: flex-end;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
 .forecast {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Optional: background for readability */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* .weather-dashboard {
-  text-align: center;
-  padding: 20px;
-}
-
-.search input {
-  padding: 8px;
-  margin-right: 8px;
-}
-
-.search button {
-  padding: 8px;
-}
-
-.weather-display,
-.favorites {
-  margin-top: 20px;
-}
-
-.favorites ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.favorites li {
-  margin-bottom: 10px;
-}
-
-.favorites button {
-  margin-left: 10px;
-} */

@@ -53,27 +53,29 @@ const MiniCard: React.FC<MiniCardProps> = ({ time, temp, iconString }) => {
     }
   }, [iconString]);
   return (
-    <div className="glassCard w-[10rem] h-[10rem] p-4 flex flex-col">
-      <p className="text-center">
-        {
-          new Date(time)
-            .toLocaleTimeString("en", { weekday: "long" })
-            .split(" ")[0]
-        }
-      </p>
-      {/* <hr /> */}
-      <div className="w-full flex justify-center items-center flex-1">
-        {icon && (
-          <Image
-            src={icon}
-            alt="forecast not available"
-            width={64} // Set width for Image
-            height={64} // Set height for Image
-            className="w-[4rem] h-[4rem]"
-          />
-        )}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="glassCard w-full h-[10rem] p-4 flex flex-col">
+        <p className="text-center">
+          {
+            new Date(time)
+              .toLocaleTimeString("en", { weekday: "long" })
+              .split(" ")[0]
+          }
+        </p>
+        <hr />
+        <div className="w-full flex justify-center items-center flex-1">
+          {icon && (
+            <Image
+              src={icon}
+              alt="forecast not available"
+              width={64}
+              height={64}
+              className="w-[4rem] h-[4rem]"
+            />
+          )}
+        </div>
+        <p className="text-center font-bold">{temp}&deg;C</p>
       </div>
-      <p className="text-center font-bold">{temp}&deg;C</p>
     </div>
   );
 };

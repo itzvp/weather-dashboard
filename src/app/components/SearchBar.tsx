@@ -13,17 +13,17 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center mb-4">
+    <div className="flex flex-col sm:flex-row justify-center items-center mb-4">
       <input
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Search city..."
-        className="p-2 border border-gray-300 rounded"
+        className="p-2 border border-gray-300 rounded w-full sm:w-auto"
       />
       <button
         onClick={handleSearch}
-        className="ml-2 p-2 bg-blue-500 text-white rounded"
+        className="mt-2 sm:mt-0 sm:ml-2 p-2 bg-blue-500 text-white rounded w-full sm:w-auto"
       >
         Search
       </button>
