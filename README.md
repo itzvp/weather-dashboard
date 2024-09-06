@@ -48,7 +48,7 @@ npm install -g json-server
 
 json-server --watch db.json --port 5000
 
-This will start a local server at http://localhost:5000/ to manage your favorite cities.
+This will start a local server at http://localhost:5000/favorites to manage your favorite cities.
 
 # Start the Application
 
